@@ -9,11 +9,11 @@ spec:
   containers:
   - name: mysql-db
     image: 954333580089.dkr.ecr.us-east-1.amazonaws.com/clo835-a1-mysqldb:latest
-    imagePullPolicy: Always  
+    imagePullPolicy: Always
     ports:
-      - name: mysql
-        containerPort: 3306
-        protocol: TCP
+    - name: mysql
+      containerPort: 3306
+      protocol: TCP
     env: 
     - name: MYSQL_ROOT_PASSWORD
       valueFrom:

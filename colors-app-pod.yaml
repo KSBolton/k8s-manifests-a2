@@ -9,11 +9,11 @@ spec:
   containers:
   - name: webapp
     image: 954333580089.dkr.ecr.us-east-1.amazonaws.com/clo835-a1-webapp:latest
-    imagePullPolicy: Always  
+    imagePullPolicy: Always
     ports:
-      - name: web8080
-        containerPort: 8080
-        protocol: TCP
+    - name: web8080
+      containerPort: 8080
+      protocol: TCP
     env:
     - name: DBHOST
       value: "mysql-db.color-be"
