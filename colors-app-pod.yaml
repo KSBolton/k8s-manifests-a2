@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: color-app
+  labels:
+    infra: frontend
+spec:
+  containers:
+  - name: webapp
+    image: 954333580089.dkr.ecr.us-east-1.amazonaws.com/clo835-a1-webapp:latest
+    imagePullPolicy: Always  
+    ports:
+      - name: web8080
+        containerPort: 8080
+        protocol: TCP
+    env:
+    - name: DBHOST
+      value: "mysql-db.color-be"
+    - name: DBPORT
+      value: "3306"
+    - name: DBPWD
+      valueFrom:
+        secretKeyRef:
+          name: mysql-db-cred
+          key: password
+    - name: APP_COLOR
+      value: "pink"       
+  imagePullSecrets:
+  - name: regcred
