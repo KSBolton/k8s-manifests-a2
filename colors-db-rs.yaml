@@ -32,4 +32,4 @@ spec:
               name: mysql-db-cred
               key: password
       imagePullSecrets:
-      - name: regcred
+      - name: ecr-cred

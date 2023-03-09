@@ -27,4 +27,4 @@ spec:
     - name: APP_COLOR
       value: "pink"       
   imagePullSecrets:
-  - name: regcred
+  - name: ecr-cred
