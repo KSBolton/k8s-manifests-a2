@@ -27,7 +27,7 @@ spec:
           protocol: TCP
         env:
         - name: DBHOST
-          value: "mysql-db.color-be"
+          value: "mysql-db-rs.color-be"
         - name: DBPORT
           value: "3306"
         - name: DBPWD
