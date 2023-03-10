@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: colors-db-dep
+  namespace: color-be
+  labels:
+    infra: backend
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        infra: backend
+        app: mysql
+    spec:
+      containers:
+      - name: mysql-db
+        image: 954333580089.dkr.ecr.us-east-1.amazonaws.com/clo835-a1-mysqldb:latest
+        imagePullPolicy: Always
+        ports:
+        - name: mysql-db
+          containerPort: 3306
+          protocol: TCP
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-cred
+              key: password
+      imagePullSecrets:
+      - name: ecr-cred  
