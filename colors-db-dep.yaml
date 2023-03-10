@@ -6,6 +6,7 @@ metadata:
   labels:
     infra: backend
     app: mysql
+    env: prod
 spec:
   replicas: 1
   selector:
@@ -16,6 +17,7 @@ spec:
       labels:
         infra: backend
         app: mysql
+        env: prod
     spec:
       containers:
       - name: mysql-db

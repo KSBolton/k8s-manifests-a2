@@ -6,6 +6,7 @@ metadata:
   labels:
     infra: frontend
     app: employees
+    env: prod
 spec:
   replicas: 3
   selector:
@@ -16,6 +17,7 @@ spec:
       labels:
         infra: frontend
         app: employees
+        env: prod
     spec:
       containers:
       - name: webapp

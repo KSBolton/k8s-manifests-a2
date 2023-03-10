@@ -5,6 +5,7 @@ metadata:
   namespace: color-fe
   labels:
     infra: frontend
+    env: dev
 spec:
   containers:
   - name: webapp

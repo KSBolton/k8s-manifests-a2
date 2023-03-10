@@ -5,6 +5,7 @@ metadata:
   namespace: color-be
   labels:
     infra: backend
+    env: dev
 spec:
   containers:
   - name: mysql-db
