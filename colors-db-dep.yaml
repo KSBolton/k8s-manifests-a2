@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: colors-db-dep
+  name: mysql-db-dep
   namespace: color-be
   labels:
     infra: backend

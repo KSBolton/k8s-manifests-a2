@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: colors-app-dep
+  name: color-app-dep
   namespace: color-fe
   labels:
     infra: frontend
