@@ -16,7 +16,7 @@ We use the available k8s manifest files to create Pods, ReplicaSets, Deployments
     - `sed -e "s|<db-password-here>|your_db_password|g" sample-secret-db-pass.yaml > secret-db-pass.yaml`
     - `k apply -f secret-ecr-be.yaml`
     - `k apply -f secret-ecr-fe.yaml`
-    -` k apply -f secret-db-pass.yaml -n color-be`
+    - `k apply -f secret-db-pass.yaml -n color-be`
     - `for i in pod rs dep svc rs-svc dep-svc; do k apply -f colors-db-$i.yaml; sleep 1; done`
     - `k apply -f secret-db-pass.yaml -n color-fe`
     - `for i in pod rs dep svc; do k apply -f colors-app-$i.yaml; sleep 1; done`
